@@ -26,7 +26,7 @@ for line in newloc:
 for line in loc:
 	nonlist.append(line.rstrip())
 	i+= 1
-	if ((line.find (': ') > 0) or (line.find (':0 ') > 0) or (line.find (':1 ') > 0)) and (line[1] != '#'):
+	if ((line.find (': ') > 0) or (line.find (':0') > 0) or (line.find (':1') > 0)) and (line[1] != '#'):
 		a = line.find('"')
 		curstr = line[0:a+1] + trlist[i] + '"'
 	else:
