@@ -24,21 +24,21 @@ class Ui_Form(QWidget):
         self.cut.clicked.connect(lambda:self.launch(self.path +'\\loc_cutter.pyw'))
         #------------------------------------------------
         self.put = QPushButton("Вставить строки", self)
-        self.put.setGeometry(QRect(20, 170, 111, 41))
+        self.put.setGeometry(QRect(20, 290, 111, 41))
         self.put.clicked.connect(lambda:self.launch(self.path +'\\loc_putter.pyw'))
         #------------------------------------------------
         self.tr = QPushButton("Быстрый перевод", self)
-        self.tr.setGeometry(QRect(20, 290, 111, 41))
+        self.tr.setGeometry(QRect(20, 170, 111, 41))
         self.tr.clicked.connect(lambda:self.launch(self.path +'\\loc_translate.pyw'))
         #------------------------------------------------
         self.label_1 = QLabel("<html><head/><body><p>Вырезает строки с переводом из файла локализации и переносит </p><p>их в файл rus_названиемода_l_english.yml</p></body></html>", self)
         self.label_1.setGeometry(QRect(160, 50, 411, 41))
         #------------------------------------------------
-        self.label_2 = QLabel("<html><head/><body><p>Берёт файл из предыдущего пункта и вставляет переведённые строки обратно в файл.</p><p>(Выбирать изначальный файл)</p><p>(Создаёт новый файл на основе изначального с приставкой new_)</p></body></html>", self)
-        self.label_2.setGeometry(QRect(160, 160, 451, 71))
+        self.label_2 = QLabel("<html><head/><body><p>Берёт файл из первого пункта и вставляет переведённые строки обратно.</p><p>(Выбирать изначальный файл)</p><p>(Создаёт новый файл на основе изначального с приставкой final_)</p></body></html>", self)
+        self.label_2.setGeometry(QRect(160, 280, 451, 71))
         #------------------------------------------------
         self.label_3 = QLabel("<html><head/><body><p>На основе файла с вырезанными строками создаёт файл </p><p>с машинным переводом от GT для ориентировки при переводе.</p><p>(Выбирать файл с приставкой rus_)</p></body></html>", self)
-        self.label_3.setGeometry(QRect(160, 280, 441, 71))
+        self.label_3.setGeometry(QRect(160, 160, 441, 71))
         #------------------------------------------------
         self.exit = QPushButton("Выход", self)
         self.exit.setGeometry(QRect(20, 410, 111, 41))
