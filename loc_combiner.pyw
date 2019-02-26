@@ -2,7 +2,6 @@
 import tkinter as tk
 from tkinter import filedialog
 import re
-from multiprocessing import Process, Lock
 
 
 def search(subs, line):
