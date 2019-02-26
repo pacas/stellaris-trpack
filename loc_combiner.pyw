@@ -49,6 +49,7 @@ def main():
 			newrs = pairs.get(ls)
 			if newrs is not None:
 				newrs = ls + newrs
+				pairs.pop(ls)
 				combined.write(newrs + '\n')
 			else:
 				combined.write(line)
