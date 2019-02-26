@@ -38,7 +38,7 @@ def main():
 	for line in loc:
 		nonlist.append(line.rstrip())
 		i += 1
-		if (search(subs, line) == 1) and (line[1] != '#'):
+		if (search(subs, line) == 1) and ((line[0] and line[1]) != '#'):
 			a = line.find('"')
 			curstr = line[0:a + 1] + trlist[i] + '"'
 		else:

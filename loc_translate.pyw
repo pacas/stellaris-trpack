@@ -34,7 +34,6 @@ def main():
 	for line in loc:
 		i += 1
 		translation = ''
-		print("Строка ", i)
 		if (len(line) > 2) and (search(subs, line) == 0):
 			test = detect(line)
 			if test != 'ru':
