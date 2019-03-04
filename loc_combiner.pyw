@@ -45,7 +45,6 @@ def main():
 		if checker(line, subs) == 1:
 			a = line.find('"')
 			ls = line[0:a]
-			ls = ls.lstrip(' ')
 			newrs = pairs.get(ls)
 			if newrs is not None:
 				newrs = ls + newrs
