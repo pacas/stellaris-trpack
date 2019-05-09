@@ -3,6 +3,14 @@ from googletrans import Translator
 import tkinter as tk
 from tkinter import filedialog
 from langdetect import detect, DetectorFactory
+import webbrowser
+
+
+def file_len(fname):
+	with open(fname) as f:
+		for i, l in enumerate(f):
+			pass
+	return i + 1
 
 
 def search(subs, line):
@@ -17,10 +25,10 @@ def search(subs, line):
 
 
 def main():
+	translator = Translator()
 	root = tk.Tk()
 	root.withdraw()
 	DetectorFactory.seed = 0
-	translator = Translator()
 
 	file1 = filedialog.askopenfilename()
 	eng = file1.split('/')[-1]
@@ -44,7 +52,10 @@ def main():
 		else:
 			translation = line
 		itog.write(translation)
-	print('end')
+
+	webbrowser.open(itog)
+	loc.close()
+	itog.close()
 
 
 if __name__ == "__main__":

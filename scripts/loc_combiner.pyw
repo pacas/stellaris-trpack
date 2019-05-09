@@ -2,6 +2,7 @@
 import tkinter as tk
 from tkinter import filedialog
 import re
+import webbrowser
 
 
 def search(subs, line):
@@ -12,7 +13,7 @@ def search(subs, line):
 		return 0
 
 
-def checker(line, subs):
+def checker(subs, line):
 	if len(line) > 2:
 		if ((line[0] and line[1]) != '#'):
 			if search(subs, line) == 1:
@@ -37,14 +38,14 @@ def main():
 	for line in translated:
 		if checker(line, subs) == 1:
 			a = line.find('"')
-			ls = line[0:a]
+			ls = line[0:a].lstrip()
 			rs = line[a:-1]
 			pairs[ls] = rs
 
 	for line in original:
 		if checker(line, subs) == 1:
 			a = line.find('"')
-			ls = line[0:a]
+			ls = line[0:a].lstrip()
 			newrs = pairs.get(ls)
 			if newrs is not None:
 				newrs = ls + newrs
@@ -55,6 +56,7 @@ def main():
 		else:
 			combined.write(line)
 
+	webbrowser.open(file3)
 	original.close()
 	translated.close()
 	combined.close()

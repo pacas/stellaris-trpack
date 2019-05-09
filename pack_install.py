@@ -10,4 +10,4 @@ if __name__ == '__main__':
     install('langdetect')
     install('googletrans')
     install('pyqt5')
-    install('Pyqt5-tools')
+    install('pyqt5-tools')
